@@ -4,5 +4,9 @@
 # Package Files #
 *.jar
 *.war
+<<<<<<< HEAD
 *.ear
 /bin/
+=======
+*.ear
+>>>>>>> ef791bb1d76b10723ca12628c8e90dc3b03de5bc
