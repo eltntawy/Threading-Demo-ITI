@@ -5,10 +5,10 @@ public class MatrixMultiplicationThread {
 
 	public static void main(String args[]) {
 
-		Matrix m1 = new MatrixThread(500, 500);
+		Matrix m1 = new MatrixThread(300, 300);
 		m1.fillMatrix();
 
-		Matrix m2 = new MatrixThread(500, 500);
+		Matrix m2 = new MatrixThread(300, 300);
 		m2.fillMatrix();
 
 		long begin = new Date().getTime();
