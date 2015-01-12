@@ -42,6 +42,8 @@ class MultiplyThread extends Thread {
 		this.j = j;
 
 		this.calcThread = calcThread;
+		
+		threadsCount++;
 	}
 
 	@Override
