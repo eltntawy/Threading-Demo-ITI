@@ -5,29 +5,32 @@ public class MatrixMultiplicationThread {
 
 	public static void main(String args[]) {
 
-		Matrix m1 = new MatrixThread(300, 300);
+		Matrix m1 = new MatrixThread(400, 400);
 		m1.fillMatrix();
 
-		Matrix m2 = new MatrixThread(300, 300);
+		Matrix m2 = new MatrixThread(400, 400);
 		m2.fillMatrix();
 
 		long begin = new Date().getTime();
 		System.out.println(m1.multiply(m2));
 		long end = new Date().getTime();
 
-		System.out.println("running time is : " + (end - begin) / 1000 + "s");
+		System.out.println("running time is : " + (end - begin) + " ms");
 
+		System.out.println("with "+MultiplyThread.getThreadsCount()+" Thread");
 	}
 }
 
 class MultiplyThread extends Thread {
 
-	int arr1[];
-	Matrix m2;
-	Thread calcThread;
-	Matrix retMatrix;
-	int i, j;
-
+	private int arr1[];
+	private Matrix m2;
+	private Thread calcThread;
+	private Matrix retMatrix;
+	private int i, j;
+	private static int threadsCount = 0; 
+	
+	
 	MultiplyThread(String name, int arr1[], Matrix m2, int i, int j,
 			Matrix retMatrix, Thread calcThread) {
 		super(name);
@@ -65,6 +68,10 @@ class MultiplyThread extends Thread {
 			}
 		}
 
+	}
+	
+	public static int getThreadsCount() {
+		return threadsCount;
 	}
 }
 

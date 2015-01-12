@@ -7,17 +7,17 @@ public class MatrixMultiplication {
 	
 	public static void main (String args [] ) {
 		
-		Matrix m1 = new Matrix(300,300);
+		Matrix m1 = new Matrix(400,400);
 		m1.fillMatrix();
 		
-		Matrix m2 = new Matrix(300, 300);
+		Matrix m2 = new Matrix(400, 400);
 		m2.fillMatrix();
 		
 		long begin = new Date().getTime();
 		System.out.println(m1.multiply(m2));
 		long end = new Date().getTime();
 		
-		System.out.println("running time is : "+ (end -begin) / 1000 + "s");
+		System.out.println("running time is : "+ (end -begin) + " ms");
 		
 	}
 }
