@@ -10,3 +10,5 @@
 =======
 *.ear
 >>>>>>> ef791bb1d76b10723ca12628c8e90dc3b03de5bc
+/hs_err_pid6517.log
+/.attach_pid2755
